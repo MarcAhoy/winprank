@@ -70,11 +70,15 @@ font-weight: normal;
 <h2>Dont turn off your computer</h2>
 <h1>Your PC Will Restart Several Times</h1>
 
-<body onkeypress="myFunction()">
+<body onload="myFunction1()" onkeypress="myFunction2()">
 
 <script>
-function myFunction() {
+function myFunction1() {
     document.documentElement.requestFullscreen()
+}
+
+function myFunction2() {
+    window.location.href = "P2.html";
 }
 </script>
 </body>

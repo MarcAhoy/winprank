@@ -1,30 +1,6 @@
 <html>
 <head>
-<SCRIPT TYPE="text/javascript"> 
-
-var message="Sorry, right-click has been disabled"; 
-function clickIE() {if (document.all) {(message);return false;}} 
-function clickNS(e) {if 
-(document.layers||(document.getElementById&&!document.all)) { 
-if (e.which==2||e.which==3) {(message);return false;}}} 
-if (document.layers) 
-{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
-else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
-document.oncontextmenu=new Function("return false") 
-// --> 
-</SCRIPT>
-<script>
-$(function() {
-  $(document).keyup(function(e) {
-    switch(e.keyCode) {
-    case 13 : open('bsod.html','_self'); break;
-    case 8 : open('bsod.html','_self'); break;
-    }
-  });
-});
-</script>
 <script>  
-
 
 var count=0;
 var stage=1;
@@ -231,6 +207,20 @@ z-index:999;  }
 </style>
 </head>
 <body>
+
+<body onload= setTimeout(myFunction1,2000) onkeypress="myFunction2()">
+
+<script>
+function myFunction1() {
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.documentElement.requestFullscreen()
+}
+
+function myFunction2() {
+    window.location.href = "P2.html";
+}
+</script>
+
 <div style="display:block;position:absolute;min-width:100%; min-height:100%;margin:0;padding:0;">
 <div class="centeragain">
 <div class="CT">
